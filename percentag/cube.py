@@ -1,9 +1,8 @@
 list_1=[]
-for i in range(1, 101, 2):
+for i in range(1, 50, 2):
     i=i**3
     list_1.append(i)
-print(list_1)
-print(len(list_1))
+# print(list_1)
 list_2=[]
 for j in list_1:
     a=j%10
@@ -14,13 +13,26 @@ for j in list_1:
     f=j//10//10//10//10//10%10
     g=j//10//10//10//10//10//10%10
     z=a+b+c+d+e+f+g
-    j=j+1
     if z%7==0:
-    list_2.append(z)
-print(list_2)
-print(len(list_2))
-#
+        list_2.append(j)
+print("Элементов в списке:", len(list_1))
+print("Сумма элементов, чья сумма цифр делится на 7:", sum(list_2))
 list_3=[]
-if i in list_1 and j in list_2:
-    True
-    list_3.append(i)
+for i in list_1:
+    x = i + 17
+    list_3.append(x)
+    for j in list_3:
+        h=j%10
+        v=j//10%10
+        k=j//10//10%10
+        l=j//10//10//10%10
+        m=j//10//10//10//10%10
+        n=j//10//10//10//10//10%10
+        o=j//10//10//10//10//10//10%10
+        y=h+v+k+l+m+n+o
+    if y%7==0:
+        list_3.append(y)
+print(list_3)
+
+
+
